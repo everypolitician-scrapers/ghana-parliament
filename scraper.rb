@@ -8,11 +8,11 @@ require 'open-uri'
 require 'date'
 require 'uri'
 
-require 'colorize'
-require 'pry'
-require 'csv'
-require 'open-uri/cached'
-OpenURI::Cache.cache_path = '.cache'
+# require 'colorize'
+# require 'pry'
+# require 'csv'
+# require 'open-uri/cached'
+# OpenURI::Cache.cache_path = '.cache'
 
 @BASE = 'http://www.parliament.gh'
 
