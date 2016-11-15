@@ -1,0 +1,40 @@
+---
+request:
+  method: get
+  uri: http://www.parliament.gh/parliamentarians/115
+  body:
+    encoding: US-ASCII
+    string: ''
+  headers:
+    Accept-Encoding:
+    - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+    Accept:
+    - '*/*'
+    User-Agent:
+    - Ruby
+response:
+  status:
+    code: 200
+    message: OK
+  headers:
+    Date:
+    - Tue, 15 Nov 2016 14:42:37 GMT
+    Server:
+    - Apache
+    X-Powered-By:
+    - PHP/5.3.3
+    Set-Cookie:
+    - ci_session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22fc29280968ce997cc2ec7fc3e563e558%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A10%3A%225.148.47.8%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A4%3A%22Ruby%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1479220957%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7Dd249d5834b2ccb15a54f3e6cfb716f0a;
+      expires=Tue, 15-Nov-2016 16:42:37 GMT; path=/
+    - csrf_xmen=f46dc5fe0e11b9753ece534544a614d6; expires=Tue, 15-Nov-2016 16:42:37
+      GMT; path=/
+    X-Server:
+    - '3908'
+    Transfer-Encoding:
+    - chunked
+    Content-Type:
+    - text/html; charset=iso-8859-1
+  body:
+    encoding: UTF-8
+  http_version: 
+recorded_at: Tue, 15 Nov 2016 14:42:37 GMT
