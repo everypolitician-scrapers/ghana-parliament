@@ -4,9 +4,10 @@
 require 'scraperwiki'
 require 'nokogiri'
 require 'date'
-require 'open-uri'
+# require 'open-uri'
 require 'date'
 require 'uri'
+require 'scraped_page_archive/open-uri'
 
 # require 'colorize'
 # require 'pry'
