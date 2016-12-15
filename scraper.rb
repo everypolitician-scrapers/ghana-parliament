@@ -57,7 +57,7 @@ class MemberPage < Scraped::HTML
   end
 
   field :party do
-    box.xpath('//strong[contains(text(),"Party")]/ancestor::td').last.css('span.content_txt').last.text.tidy
+    box.xpath('//strong[contains(text(),"Party")]/ancestor::td').last.css('span.content_txt').last.text.gsub(/\s*\(\s*M(ajor|inor)ity\s*\)\s*/,'').tidy
   end
 
   field :religion do
@@ -96,9 +96,7 @@ end
 
 def scrape_mp(url)
   page = MemberPage.new(response: Scraped::Request.new(url: url).response)
-
   data = page.to_h
-  data[:party].gsub!(/\s*\(\s*M(ajor|inor)ity\s*\)\s*/,'')
 
   # The profile <img> for one MP has an erroneous src attribute
   # http://www.parliament.gh/parliamentarians/105
