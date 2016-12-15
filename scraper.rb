@@ -57,6 +57,12 @@ def scrape_mp(url)
   }
   data[:party].gsub!(/\s*\(\s*M(ajor|inor)ity\s*\)\s*/,'')
   data[:image].prepend @BASE unless data[:image].empty?
+  # The profile <img> for one MP has an erroneous src attribute
+  # http://www.parliament.gh/parliamentarians/105
+  # src="/userfiles/mps/404error.php.txt.txt"
+  # It doesn't point to the member's image, so we don't want
+  # to capture it.
+  data[:image] = nil if data[:image].include?('404error')
   # puts data
   ScraperWiki.save_sqlite([:id, :term], data)
 end
