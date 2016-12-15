@@ -50,7 +50,7 @@ def scrape_mp(url)
     term: 6,
   }
   data[:party].gsub!(/\s*\(\s*M(ajor|inor)ity\s*\)\s*/,'')
-  data[:image].prepend @BASE unless data[:image].empty?
+  data[:image] = URI.join(url, data[:image]).to_s unless data[:image].to_s.empty?
   # The profile <img> for one MP has an erroneous src attribute
   # http://www.parliament.gh/parliamentarians/105
   # src="/userfiles/mps/404error.php.txt.txt"
