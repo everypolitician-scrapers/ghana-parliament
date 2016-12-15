@@ -1,5 +1,6 @@
 #!/bin/env ruby
 # encoding: utf-8
+# frozen_string_literal: true
 
 require 'date'
 require 'nokogiri'
@@ -53,11 +54,11 @@ class MemberPage < Scraped::HTML
   end
 
   field :constituency do
-    box.at_css('div.content_subheader').text.tidy.match(/MP\s+for\s+(.*)\s+constituency,\s*(.*)/).captures.join(", ")
+    box.at_css('div.content_subheader').text.tidy.match(/MP\s+for\s+(.*)\s+constituency,\s*(.*)/).captures.join(', ')
   end
 
   field :party do
-    box.xpath('//strong[contains(text(),"Party")]/ancestor::td').last.css('span.content_txt').last.text.gsub(/\s*\(\s*M(ajor|inor)ity\s*\)\s*/,'').tidy
+    box.xpath('//strong[contains(text(),"Party")]/ancestor::td').last.css('span.content_txt').last.text.gsub(/\s*\(\s*M(ajor|inor)ity\s*\)\s*/, '').tidy
   end
 
   field :religion do
@@ -83,7 +84,6 @@ class MemberPage < Scraped::HTML
   end
 end
 
-
 def scrape_list(url)
   warn "Getting #{url}"
   page = MembersPage.new(response: Scraped::Request.new(url: url).response)
@@ -104,8 +104,8 @@ def scrape_mp(url)
   # It doesn't point to the member's image, so we don't want
   # to capture it.
   data[:image] = nil if data[:image].include?('404error')
-  # puts data
-  ScraperWiki.save_sqlite([:id, :term], data)
+  # puts data
+  ScraperWiki.save_sqlite(%i(id term), data)
 end
 
 scrape_list 'http://www.parliament.gh/parliamentarians'
