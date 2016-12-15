@@ -62,15 +62,15 @@ class MemberPage < Scraped::HTML
   end
 
   field :religion do
-    box.xpath('//strong[contains(text(),"Religion")]/following::td').first.text
+    following_td('Religion').first.text
   end
 
   field :birth_date do
-    datefrom(box.xpath('//strong[contains(text(),"Date of Birth")]/following::td').first.text).to_s
+    datefrom(following_td('Date of Birth').first.text).to_s
   end
 
   field :email do
-    box.xpath('//strong[contains(text(),"Email")]/following::td').first.text
+    following_td('Email').first.text
   end
 
   field :term do
@@ -81,6 +81,10 @@ class MemberPage < Scraped::HTML
 
   def box
     noko.css('.content_text_column')
+  end
+
+  def following_td(text)
+    box.xpath('//strong[contains(text(),"%s")]/following::td' % text)
   end
 end
 
