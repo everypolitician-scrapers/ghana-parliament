@@ -59,13 +59,3 @@ def scrape_mp(url)
 end
 
 scrape_list 'http://www.parliament.gh/parliamentarians'
-
-# http://en.wikipedia.org/w/index.php?title=MPs_elected_in_the_Ghanaian_parliamentary_election,_2012&oldid=626903925
-term = {
-  id: 6,
-  name: "Sixth Parliament of the Fourth Republic",
-  source: "http://www.parliament.gh/publications/53/732",
-  start_date: '2013-01-07',
-}
-ScraperWiki.save_sqlite([:id], term, 'terms')
-
