@@ -3,17 +3,14 @@
 
 require 'date'
 require 'nokogiri'
-require 'scraped_page_archive/open-uri'
 require 'scraperwiki'
 
+require 'scraped_page_archive/open-uri'
 # require 'open-uri/cached'
 # OpenURI::Cache.cache_path = '.cache'
 
-@BASE = 'http://www.parliament.gh'
-
 def noko_for(url)
-  url.prepend @BASE unless url.start_with? 'http:'
-  Nokogiri::HTML(open(url).read) 
+  Nokogiri::HTML(open(url).read)
 end
 
 def datefrom(date)
@@ -61,7 +58,7 @@ def scrape_mp(url)
   ScraperWiki.save_sqlite([:id, :term], data)
 end
 
-scrape_list('/parliamentarians/')
+scrape_list 'http://www.parliament.gh/parliamentarians'
 
 # http://en.wikipedia.org/w/index.php?title=MPs_elected_in_the_Ghanaian_parliamentary_election,_2012&oldid=626903925
 term = {
