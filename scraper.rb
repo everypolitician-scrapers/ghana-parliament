@@ -31,6 +31,51 @@ class MembersPage < Scraped::HTML
   end
 end
 
+class MemberPage < Scraped::HTML
+  field :id do
+    url[/(\d+)$/, 1]
+  end
+
+  field :name do
+    box.at_css('.left_subheaders').text
+  end
+
+  field :image do
+    box.at_css('img[src*="/userfiles/"]/@src').text
+  end
+
+  field :constituency do
+    box.at_css('div.content_subheader').text.strip.match(/MP\s+for\s+(.*)\s+constituency,\s*(.*)/).captures.join(", ")
+  end
+
+  field :party do
+    box.xpath('//strong[contains(text(),"Party")]/ancestor::td').last.css('span.content_txt').last.text.gsub(/[[:space:]]+/,' ')
+  end
+
+  field :religion do
+    box.xpath('//strong[contains(text(),"Religion")]/following::td').first.text
+  end
+
+  field :birth_date do
+    datefrom(box.xpath('//strong[contains(text(),"Date of Birth")]/following::td').first.text).to_s
+  end
+
+  field :email do
+    box.xpath('//strong[contains(text(),"Email")]/following::td').first.text
+  end
+
+  field :term do
+    6
+  end
+
+  private
+
+  def box
+    noko.css('.content_text_column')
+  end
+end
+
+
 def scrape_list(url)
   warn "Getting #{url}"
   page = MembersPage.new(response: Scraped::Request.new(url: url).response)
@@ -42,20 +87,9 @@ def scrape_list(url)
 end
 
 def scrape_mp(url)
-  box = noko_for(url).css('.content_text_column')
+  page = MemberPage.new(response: Scraped::Request.new(url: url).response)
 
-  data = { 
-    id: url[/(\d+)$/, 1],
-    name: box.at_css('.left_subheaders').text,
-    image: box.at_css('img[src*="/userfiles/"]/@src').text,
-    # TODO split these up again
-    constituency: box.at_css('div.content_subheader').text.strip.match(/MP\s+for\s+(.*)\s+constituency,\s*(.*)/).captures.join(", "),
-    party: box.xpath('//strong[contains(text(),"Party")]/ancestor::td').last.css('span.content_txt').last.text.gsub(/[[:space:]]+/,' '),
-    religion: box.xpath('//strong[contains(text(),"Religion")]/following::td').first.text,
-    birth_date: datefrom(box.xpath('//strong[contains(text(),"Date of Birth")]/following::td').first.text).to_s,
-    email: box.xpath('//strong[contains(text(),"Email")]/following::td').first.text,
-    term: 6,
-  }
+  data = page.to_h
   data[:party].gsub!(/\s*\(\s*M(ajor|inor)ity\s*\)\s*/,'')
   data[:image] = URI.join(url, data[:image]).to_s unless data[:image].to_s.empty?
   # The profile <img> for one MP has an erroneous src attribute
