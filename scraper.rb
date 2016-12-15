@@ -3,6 +3,7 @@
 
 require 'date'
 require 'nokogiri'
+require 'scraped'
 require 'scraperwiki'
 
 require 'scraped_page_archive/open-uri'
@@ -18,17 +19,26 @@ def datefrom(date)
   Date.parse(date)
 end
 
+class MembersPage < Scraped::HTML
+  field :mp_urls do
+    noko.css('#mid_content_conteiner .mp_repeater').map do |mpbox|
+      mpbox.at_css('a[@href*="/parliamentarians/"]/@href').text
+    end
+  end
+
+  field :next_page do
+    noko.css('span.content_txt').xpath('.//a[contains(text(),">")]/@href').text
+  end
+end
+
 def scrape_list(url)
   warn "Getting #{url}"
-  noko = noko_for(url)
-
-  noko.css('#mid_content_conteiner .mp_repeater').each do |mpbox|
-    mp_url = mpbox.at_css('a[@href*="/parliamentarians/"]/@href').text
+  page = MembersPage.new(response: Scraped::Request.new(url: url).response)
+  page.mp_urls.each do |mp_url|
     scrape_mp(mp_url)
   end
 
-  next_page = noko.css('span.content_txt').xpath('.//a[contains(text(),">")]/@href')
-  scrape_list(next_page.text) unless next_page.empty?
+  scrape_list(page.next_page) unless page.next_page.empty?
 end
 
 def scrape_mp(url)
