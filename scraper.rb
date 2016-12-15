@@ -19,6 +19,12 @@ def datefrom(date)
   Date.parse(date)
 end
 
+class String
+  def tidy
+    gsub(/[[:space:]]+/, ' ').strip
+  end
+end
+
 class MembersPage < Scraped::HTML
   field :mp_urls do
     noko.css('#mid_content_conteiner .mp_repeater').map do |mpbox|
@@ -47,11 +53,11 @@ class MemberPage < Scraped::HTML
   end
 
   field :constituency do
-    box.at_css('div.content_subheader').text.strip.match(/MP\s+for\s+(.*)\s+constituency,\s*(.*)/).captures.join(", ")
+    box.at_css('div.content_subheader').text.tidy.match(/MP\s+for\s+(.*)\s+constituency,\s*(.*)/).captures.join(", ")
   end
 
   field :party do
-    box.xpath('//strong[contains(text(),"Party")]/ancestor::td').last.css('span.content_txt').last.text.gsub(/[[:space:]]+/,' ')
+    box.xpath('//strong[contains(text(),"Party")]/ancestor::td').last.css('span.content_txt').last.text.tidy
   end
 
   field :religion do
