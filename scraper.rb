@@ -102,14 +102,16 @@ def scrape_mp(url)
   page = MemberPage.new(response: Scraped::Request.new(url: url).response)
   data = page.to_h
 
-  # The profile <img> for one MP has an erroneous src attribute
+  # The profile <img> for two MPs has an erroneous src attribute
   # http://www.parliament.gh/parliamentarians/105
-  # src="/userfiles/mps/404error.php.txt.txt"
-  # It doesn't point to the member's image, so we don't want
-  # to capture it.
-  data[:image] = nil if data[:image].include?('404error')
-  # puts data
-  ScraperWiki.save_sqlite(%i(id term), data)
+  # src="/userfiles/mps/404error.php.txt.txt" and
+  # "http://www.parliament.gh/userfiles/mps/"
+  # They don't point to the member's image, so we don't want
+  # to capture them.
+  data[:image] = nil if data[:image].include?('404error') ||
+                        data[:image] == 'http://www.parliament.gh/userfiles/mps/'
+  # puts data
+  ScraperWiki.save_sqlite([:id, :term], data)
 end
 
 scrape_list 'http://www.parliament.gh/parliamentarians'
