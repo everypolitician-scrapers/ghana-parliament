@@ -110,8 +110,8 @@ def scrape_mp(url)
   # to capture them.
   data[:image] = nil if data[:image].include?('404error') ||
                         data[:image] == 'http://www.parliament.gh/userfiles/mps/'
-  # puts data
-  ScraperWiki.save_sqlite([:id, :term], data)
+  # puts data
+  ScraperWiki.save_sqlite(%i(id term), data)
 end
 
 scrape_list 'http://www.parliament.gh/parliamentarians'
