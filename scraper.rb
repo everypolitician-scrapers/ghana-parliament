@@ -50,7 +50,13 @@ class MemberPage < Scraped::HTML
   end
 
   field :image do
-    box.at_css('img[src*="/userfiles/"]/@src').text
+    # The profile <img> for two MPs has an erroneous src attribute
+    # http://www.parliament.gh/parliamentarians/105
+    # src="/userfiles/mps/404error.php.txt.txt" and
+    # "http://www.parliament.gh/userfiles/mps/"
+    # They don't point to the member's image, so we don't want
+    image_src unless image_src.include?('404error') ||
+                     image_src == 'http://www.parliament.gh/userfiles/mps/'
   end
 
   field :constituency do
@@ -86,6 +92,10 @@ class MemberPage < Scraped::HTML
   def following_td(text)
     box.xpath('//strong[contains(text(),"%s")]/following::td' % text)
   end
+
+  def image_src
+    box.at_css('img[src*="/userfiles/"]/@src').text
+  end
 end
 
 def scrape_list(url)
@@ -101,14 +111,6 @@ end
 def scrape_mp(url)
   page = MemberPage.new(response: Scraped::Request.new(url: url).response)
   data = page.to_h
-
-  # The profile <img> for one MP has an erroneous src attribute
-  # http://www.parliament.gh/parliamentarians/105
-  # src="/userfiles/mps/404error.php.txt.txt"
-  # It doesn't point to the member's image, so we don't want
-  # to capture it.
-  data[:image] = nil if data[:image].include?('404error')
-  # puts data
   ScraperWiki.save_sqlite(%i(id term), data)
 end
 
