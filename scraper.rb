@@ -20,12 +20,6 @@ def datefrom(date)
   Date.parse(date)
 end
 
-class String
-  def tidy
-    gsub(/[[:space:]]+/, ' ').strip
-  end
-end
-
 class MembersPage < Scraped::HTML
   field :mp_urls do
     noko.css('#mid_content_conteiner .mp_repeater').map do |mpbox|
