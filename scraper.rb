@@ -103,8 +103,8 @@ def scrape_list(url)
 end
 
 def scrape_mp(url)
-  page = MemberPage.new(response: Scraped::Request.new(url: url).response)
-  data = page.to_h
+  data = MemberPage.new(response: Scraped::Request.new(url: url).response).to_h
+  # puts data
   ScraperWiki.save_sqlite(%i(id term), data)
 end
 
