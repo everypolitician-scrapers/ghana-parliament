@@ -20,12 +20,6 @@ def datefrom(date)
   Date.parse(date)
 end
 
-class String
-  def tidy
-    gsub(/[[:space:]]+/, ' ').strip
-  end
-end
-
 class MembersPage < Scraped::HTML
   field :mp_urls do
     noko.css('#mid_content_conteiner .mp_repeater').map do |mpbox|
@@ -109,9 +103,10 @@ def scrape_list(url)
 end
 
 def scrape_mp(url)
-  page = MemberPage.new(response: Scraped::Request.new(url: url).response)
-  data = page.to_h
+  data = MemberPage.new(response: Scraped::Request.new(url: url).response).to_h
+  # puts data
   ScraperWiki.save_sqlite(%i(id term), data)
 end
 
+ScraperWiki.sqliteexecute('DELETE FROM data') rescue nil
 scrape_list 'http://www.parliament.gh/parliamentarians'
