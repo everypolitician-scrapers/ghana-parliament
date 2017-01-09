@@ -108,4 +108,5 @@ def scrape_mp(url)
   ScraperWiki.save_sqlite(%i(id term), data)
 end
 
+ScraperWiki.sqliteexecute('DELETE FROM data') rescue nil
 scrape_list 'http://www.parliament.gh/parliamentarians'
