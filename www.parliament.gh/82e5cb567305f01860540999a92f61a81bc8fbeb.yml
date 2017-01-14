@@ -18,15 +18,15 @@ response:
     message: OK
   headers:
     Date:
-    - Sat, 14 Jan 2017 00:58:25 GMT
+    - Sat, 14 Jan 2017 01:01:02 GMT
     Server:
     - Apache
     X-Powered-By:
     - PHP/5.3.3
     Set-Cookie:
-    - ci_session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%2298406b30808ed1da85be777cd410f98d%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A11%3A%2250.116.3.88%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A4%3A%22Ruby%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1484355505%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7D459eaae9cd7c38f8f8276543156ad41c;
-      expires=Sat, 14-Jan-2017 02:58:25 GMT; path=/
-    - csrf_xmen=cfd7d6f80919c5afcec27e2beb47e17b; expires=Sat, 14-Jan-2017 02:58:25
+    - ci_session=a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%221ba1ac2fc0bed80b6997a19632f3f330%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A11%3A%2250.116.3.88%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A4%3A%22Ruby%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1484355662%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7De69674cb32e26bd4f31b83841c2ad3e3;
+      expires=Sat, 14-Jan-2017 03:01:02 GMT; path=/
+    - csrf_xmen=c2b63e5ab485b394c9bc7f044a98b92c; expires=Sat, 14-Jan-2017 03:01:02
       GMT; path=/
     X-Server:
     - '3908'
@@ -37,4 +37,4 @@ response:
   body:
     encoding: UTF-8
   http_version: 
-recorded_at: Sat, 14 Jan 2017 00:58:25 GMT
+recorded_at: Sat, 14 Jan 2017 01:01:02 GMT
