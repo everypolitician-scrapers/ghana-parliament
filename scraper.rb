@@ -105,7 +105,7 @@ end
 def scrape_mp(url)
   data = MemberPage.new(response: Scraped::Request.new(url: url).response).to_h
   # puts data
-  ScraperWiki.save_sqlite(%i(id term), data)
+  ScraperWiki.save_sqlite(%i[id term], data)
 end
 
 ScraperWiki.sqliteexecute('DELETE FROM data') rescue nil
