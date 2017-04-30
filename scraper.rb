@@ -6,9 +6,9 @@ require 'pry'
 require 'scraped'
 require 'scraperwiki'
 
-# require 'open-uri/cached'
-# OpenURI::Cache.cache_path = '.cache'
-require 'scraped_page_archive/open-uri'
+require 'open-uri/cached'
+OpenURI::Cache.cache_path = '.cache'
+# require 'scraped_page_archive/open-uri'
 
 def noko_for(url)
   Nokogiri::HTML(open(url).read)
@@ -32,7 +32,7 @@ class MembersPage < Scraped::HTML
 end
 
 class MemberPage < Scraped::HTML
-  decorator Scraped::Response::Decorator::AbsoluteUrls
+  decorator Scraped::Response::Decorator::CleanUrls
 
   field :id do
     url[/(\d+)$/, 1]
