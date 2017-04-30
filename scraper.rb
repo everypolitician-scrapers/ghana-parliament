@@ -103,7 +103,7 @@ end
 
 def scrape_mp(url)
   data = MemberPage.new(response: Scraped::Request.new(url: url).response).to_h
-  # puts data
+  puts data.reject { |_, v| v.to_s.empty? }.sort_by { |k, _| k }.to_h if ENV['MORPH_DEBUG']
   ScraperWiki.save_sqlite(%i[id term], data)
 end
 
