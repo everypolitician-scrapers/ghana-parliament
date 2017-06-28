@@ -10,10 +10,6 @@ require 'open-uri/cached'
 OpenURI::Cache.cache_path = '.cache'
 # require 'scraped_page_archive/open-uri'
 
-def noko_for(url)
-  Nokogiri::HTML(open(url).read)
-end
-
 def datefrom(date)
   return if date.empty?
   Date.parse(date)
