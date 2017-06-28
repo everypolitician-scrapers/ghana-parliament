@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
 require 'scraped'
+require_relative './member_card'
 
 class MembersPage < Scraped::HTML
-  field :mp_urls do
-    noko.css('#mid_content_conteiner .mp_repeater').map do |mpbox|
-      mpbox.at_css('a[@href*="/parliamentarians/"]/@href').text
+  field :member_cards do
+    noko.css('.card').map do |card|
+      (fragment card => MemberCard).to_h
     end
   end
 
