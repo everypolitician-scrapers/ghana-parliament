@@ -12,21 +12,23 @@ OpenURI::Cache.cache_path = '.cache'
 
 require_rel 'lib'
 
-def scrape_list(url)
-  warn "Getting #{url}"
-  page = MembersPage.new(response: Scraped::Request.new(url: url).response)
-  page.mp_urls.each do |mp_url|
-    scrape_mp(mp_url)
+def scrape(h)
+  url, klass = h.to_a.first
+  klass.new(response: Scraped::Request.new(url: url).response)
+end
+
+def member_data(url)
+  page = scrape url => MembersPage
+  page.member_cards.map do |mp_card|
+    mp_card.merge((scrape mp_card[:source] => MemberPage).to_h).merge(term: 6)
   end
-
-  scrape_list(page.next_page) unless page.next_page.empty?
 end
 
-def scrape_mp(url)
-  data = MemberPage.new(response: Scraped::Request.new(url: url).response).to_h
-  puts data.reject { |_, v| v.to_s.empty? }.sort_by { |k, _| k }.to_h if ENV['MORPH_DEBUG']
-  ScraperWiki.save_sqlite(%i[id term], data)
+starting_url = 'https://www.parliament.gh/mps?az&filter=all'
+data = (scrape starting_url => MembersPage).members_pages_urls.flat_map do |url|
+  member_data(url)
 end
 
+data.each { |mem| puts mem.reject { |_, v| v.to_s.empty? }.sort_by { |k, _| k }.to_h } if ENV['MORPH_DEBUG']
 ScraperWiki.sqliteexecute('DROP TABLE data') rescue nil
-scrape_list 'http://www.parliament.gh/parliamentarians'
+ScraperWiki.save_sqlite(%i[id term], data)
