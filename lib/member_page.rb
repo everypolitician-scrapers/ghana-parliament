@@ -30,7 +30,7 @@ class MemberPage < Scraped::HTML
   end
 
   field :birth_date do
-    Date.parse(record_for('Date of Birth'))
+    datefrom(record_for('Date of Birth'))
   end
 
   field :email do
@@ -47,8 +47,10 @@ class MemberPage < Scraped::HTML
     box.xpath('//b[contains(text(),"%s")]/following::td' % text).first.text.tidy
   end
 
-  def datefrom(date)
-    return if date.empty?
-    Date.parse(date).to_s
+  def datefrom(str)
+    return if str.empty?
+    date = Date.parse(str)
+    return if date.year < 1900 # some records broken upstream
+    date
   end
 end
