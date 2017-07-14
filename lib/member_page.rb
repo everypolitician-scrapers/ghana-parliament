@@ -18,7 +18,7 @@ class MemberPage < Scraped::HTML
   end
 
   field :constituency do
-    box.css('center').text[/(?<= MP\ for)(.*)/].tidy.chomp('.')
+    box.css('center').text[/MP for (.*)/, 1].tidy.chomp('.')
   end
 
   field :party do
