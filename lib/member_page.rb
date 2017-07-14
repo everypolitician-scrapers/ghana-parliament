@@ -49,6 +49,6 @@ class MemberPage < Scraped::HTML
 
   def datefrom(date)
     return if date.empty?
-    Date.parse(date)
+    Date.parse(date).to_s
   end
 end
