@@ -4,7 +4,7 @@ require 'scraped'
 
 class MemberCard < Scraped::HTML
   field :id do
-    noko.at_css('button @onclick').text[/\d+/]
+    member_link[/(\d+)/, 1]
   end
 
   field :name do
@@ -20,6 +20,12 @@ class MemberCard < Scraped::HTML
   end
 
   field :source do
-    url.split('?').first + '?mp=' + id
+    URI.join(url, member_link).to_s
+  end
+
+  private
+
+  def member_link
+    noko.at_css('button @onclick').text[/'(.*?)'/, 1]
   end
 end
