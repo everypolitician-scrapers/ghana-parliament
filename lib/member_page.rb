@@ -10,55 +10,41 @@ class MemberPage < Scraped::HTML
   end
 
   field :name do
-    box.at_css('.left_subheaders').text
+    box.at_css('h4').text.sub('HON.', '').tidy
   end
 
   field :image do
-    # The profile <img> for two MPs has an erroneous src attribute
-    # http://www.parliament.gh/parliamentarians/105
-    # src="/userfiles/mps/404error.php.txt.txt" and
-    # "http://www.parliament.gh/userfiles/mps/"
-    # They don't point to the member's image, so we don't want
-    image_src unless image_src.include?('404error') ||
-                     image_src == 'http://www.parliament.gh/userfiles/mps/'
+    box.at_css('img @src').text
   end
 
   field :constituency do
-    box.at_css('div.content_subheader').text.tidy.match(/MP\s+for\s+(.*)\s+constituency,\s*(.*)/).captures.join(', ')
+    box.css('center').text[/MP for (.*)/, 1].tidy.chomp('.')
   end
 
   field :party do
-    box.xpath('//strong[contains(text(),"Party")]/ancestor::td').last.css('span.content_txt').last.text.gsub(/\s*\(\s*M(ajor|inor)ity\s*\)\s*/, '').tidy
+    record_for('Party').split('(').first.tidy
   end
 
   field :religion do
-    following_td('Religion').first.text
+    record_for('Religion')
   end
 
   field :birth_date do
-    datefrom(following_td('Date of Birth').first.text).to_s
+    Date.parse(record_for('Date of Birth'))
   end
 
   field :email do
-    following_td('Email').first.text
-  end
-
-  field :term do
-    6
+    record_for('Email')
   end
 
   private
 
   def box
-    noko.css('.content_text_column')
+    noko.css('#content')
   end
 
-  def following_td(text)
-    box.xpath('//strong[contains(text(),"%s")]/following::td' % text)
-  end
-
-  def image_src
-    box.at_css('img[src*="/userfiles/"]/@src').text
+  def record_for(text)
+    box.xpath('//b[contains(text(),"%s")]/following::td' % text).first.text
   end
 
   def datefrom(date)

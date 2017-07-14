@@ -1,0 +1,380 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.parliament.gh/mps?mp=265
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 30 Jun 2017 12:08:35 GMT
+      Server:
+      - Apache
+      X-Powered-By:
+      - PHP/5.6.24
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Set-Cookie:
+      - PHPSESSID=f2509e97344fd2ecc9087e511e2851e5; path=/
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: "\n\n\n\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\"
+        \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n
+        \   <head>        \n        <meta name=\"author\" content=\"ICT Dept. Office
+        of Parliament, Ghana\" />\n        <meta name=\"description\" content=\"\"
+        />\n        <meta name=\"keywords\" content=\"Parliament, Ghana\" />\n        <meta
+        name=\"theme-color\" content=\"#209D9D\" />\n\n        <title>Parliament of
+        Ghana</title>\n        <meta http-equiv=\"content-type\" content=\"text/html;
+        charset=utf-8\" />\n        <link rel=\"shortcut icon\" type=\"image/x-icon\"
+        href=\"./logo.ico\" />\n        <link rel=\"stylesheet\" type=\"text/css\"
+        href=\"css/style.css\" />\n        <link rel=\"stylesheet\" type=\"text/css\"
+        href=\"css/tabs.css\"/>\n        <link rel=\"stylesheet\" type=\"text/css\"
+        href=\"css/font-awesome.min.css\"/>        \n        <link rel=\"stylesheet\"
+        type=\"text/css\" href=\"css/elements.css\"/>\n        <link rel=\"stylesheet\"
+        type=\"text/css\" href=\"colorbox.css\"/>\n        <!--script type=\"text/javascript\"
+        src=\"js/jquery-1.6.3.min.js\"></script-->\n        <script type=\"text/javascript\"
+        src=\"js/jquery.js\"></script>\n        <script type=\"text/javascript\" src=\"js/tabs.js\"></script>\n
+        \       <script type=\"text/javascript\" src=\"js/custom.js\"></script>\n
+        \       <script type=\"text/javascript\" src=\"js/functions.js\"></script>\n
+        \       <script src=\"js/jquery.colorbox.js\"></script>\n    </head>\n    <body>\n
+        \       <div id=\"header\">\n            <div id=\"logo\">\n                <img
+        src=\"images/logo.png\" alt=\"logo\"/>\n                <h1>Parliament of
+        Ghana</h1>\n            </div><center>\n                <div id=\"slogan\"
+        \ >\n\n\n                </div>\n\n            </center>\n            <div
+        class=\"right-bar\"><br/>\n                <!--span class=\"icon-envelope\"></span>
+        <a href=\"#\">info@parliament.gh</a> <span class=\"sep\">&nbsp; |&nbsp; </span>
+        <span class=\"icon-phone\"></span> +xx xxx xxxxxxxxxx\n                <br/><br/--><br/>\n
+        \               <span class=\"google-mail-open\"></span> <a href=\"contact\">Contact
+        us</a><span class=\"sep\">&nbsp; |&nbsp; </span><span class=\"icon-map-marker\"></span>
+        <a href=\"maps\">Directions</a><span class=\"sep\">&nbsp; |&nbsp; </span><span
+        class=\"icon-inbox\"></span> <a href=\"http://mail.parliament.gh\" target='_blank'>Webmail</a>
+        \ <br/><br/>\n\n                <ul class=\"contact\">\n                    <li><a
+        href=\"#\" title=\"Follow us on Twitter\" class=\"icon icon-twitter\"><span>Twitter</span></a></li>\n
+        \                   <li><a href=\"#\" title=\"Like us on Facebook\" class=\"icon
+        icon-facebook\"><span>Facebook</span></a></li>\t\t\t\t\n                    <li><a
+        href=\"https://www.youtube.com/channel/UCP5-atAAZsIOscm-4EkL9nQ\" target=\"_blank\"
+        title=\"Subscribe to our Youtube channel\" class=\"icon icon-youtube-sign\"><span>Youtube</span></a></li>\n\n
+        \               </ul>\n\n            </div>\n        </div>\n        <div
+        id=\"wrapper\">\n\n            <div id=\"menubar\">\n                <ul>\n
+        \                   <li class=\"active\"><a href=\"./\">Home</a></li>\n\n
+        \                   <li class=\"dropdown\">\n                        <a href=\"#\"
+        class=\"dropbtn\">About Parliament</a>\n                        <div class=\"dropdown-content\">\n
+        \                           <a href=\"history\">History</a>\n                            <a
+        href=\"mandate\">Mandate of Parliament</a>\n                            <!--a
+        href=\"composition\">Composition of Parliament</a-->\n                            <a
+        href=\"committees\">Committees of Parliament</a>\n                            <a
+        href=\"ps\">Parliamentary Service</a>\n                            <a href=\"gallery\">Photo
+        Gallery</a>\n                        </div></li>\n                    <li
+        class=\"dropdown\">\n                        <a href=\"#\" class=\"dropbtn\">Parliamentary
+        Business</a>\n                        <div class=\"dropdown-content\">\n                            <a
+        href=\"docs?type=OP\">Order Papers</a> <!--a href=\"#\">Parliamentary Calendar</a-->\n
+        \                           <a href=\"docs?type=BS\">Business Statement</a>\n
+        \                           <a href=\"docs?type=VP\">Votes & Proceedings</a>\n
+        \                           <a href=\"docs?type=AG\">Agenda</a>\n                            <a
+        href=\"docs?type=Acts&OT\">Acts</a>\n                            <a href=\"docs?type=Bills&OT\">Bills</a>\n
+        \                           <a href=\"docs?type=LI&OT\">Legislative Instruments</a>\n
+        \                           <a href=\"docs?type=CI&OT\">Constitutional Instruments</a>\n
+        \                           <a href=\"docs?type=HS\">Hansard</a>\n                        </div>\n
+        \                   </li>\n                    <li class=\"dropdown\"><a href=\"#\"
+        class=\"dropbtn\">Members of Parliament</a>\n                        <div
+        class=\"dropdown-content\">\n                            <a href=\"mps\">Overview</a>\n
+        \                           <a href=\"mps?leadership\">Leadership of Parliament</a>\n
+        \                           <a href=\"mps?az\">A-Z list of MPs</a>\n                        </div>\n
+        \                   </li>\n                    <li class=\"dropdown\"><a href=\"#\"
+        class=\"dropbtn\">Publications</a>\n                        <div class=\"dropdown-content\">\n
+        \                           <a href=\"publications?journals\">Journals</a>\n
+        \                           <a href=\"publications?research\">Research Papers</a>\n
+        \                           <a href=\"publications?sona\">SONA & Budget Statements</a>\n
+        \                       </div>\n\n                    </li>\n                    <li
+        class=\"dropdown\"><a href=\"news\" >News & Events</a>\n                        <!--div
+        class=\"dropdown-content\">\n                            <a href=\"news?GN\">General
+        news</a>\n                            <a href=\"news?CC\">Courtesy Calls</a>\n
+        \                           <a href=\"news?BS\">Budget Statements</a>\n                            <a
+        href=\"news?SN\">State of Nation Address</a>\n                        </div-->\n
+        \                   </li>\t\t\t\n                    <!--li class=\"last\"><a
+        href=\"#\">Contact</a></li-->\n                </ul>\n                <br
+        class=\"clearfix\" />\n            </div>\n            <!--div id=\"splash\">\n
+        \               <img class=\"pic\" src=\"images/pic01.jpg\" width=\"870\"
+        height=\"230\" alt=\"\" />\n            </div-->\n            <hr class=\"hr
+        hd\"/>\n            <div id=\"page\">\n<div id=\"content\">    <h3>Member
+        of Parliament</h3>\r\n    <table>\r\n        <tbody>\r\n            <tr>\r\n
+        \               <td style='vertical-align: top'><img class=\"emboss\" src=\"epanel/mps/IBRAHIM_ABDUL-REHUF_TANKO_YAGABA-KUBORENDC.jpg\"/>\r\n
+        \                   <br/>\r\n        <center><br/>\r\n            <h4>HON.
+        ABDUL-RAUF TANKO IBRAHIM</h4>\r\n            MP for Yagaba-Kubori constituency,
+        Northern region.\r\n        </center>\r\n    </td>\r\n    <td style=\"vertical-align:
+        top\">\r\n        <table cellspacing=\"10\" cellpadding=\"5\">\r\n            <tbody>\r\n
+        \               <tr><td style=\"width:25%\"><b>Hometown:</b></td><td>YAGABA</td></tr>\r\n
+        \               <tr><td style=\"vertical-align: top\"><b>Party:</b></td><td>National
+        Democratic Congress (Minority)</td></tr>\r\n                <tr><td style=\"vertical-align:
+        top\"><b>Education:</b></td><td><font size=\"2\">A' LEVEL (NAVRONGO SECONDARY
+        SCHOOL)<br/><br/></font></td></tr>\r\n                <tr><td><b>Date of Birth:</b></td><td>Thursday,
+        10th October, 1968</td></tr>\r\n                <tr><td><b>Religion:</b></td><td>Muslim</td></tr>\r\n
+        \               <tr><td><b>Email:</b></td><td>hukuma5111@gmail.com</td></tr>\r\n
+        \               <tr><td colspan=\"2\"><br/><center><b>Employment</b><br/><hr
+        class=\"hr10\"/></center></td></tr>\r\n    <tr><td colspan=\"2\"><font size=\"2\">MANAGING
+        DIRECTOR,1983-2016 (TASS KALIAN ENT.LTD)<br/><br/>HAJJ CHAIRMAN,2013-2016
+        (OFFICE OF THE PRESIDENT)<br/><br/></font></td></tr>\r\n        </tbody>\r\n
+        \   </table>\r\n\r\n\r\n    </td>\r\n    </tr>\r\n    </tbody>            \r\n
+        \   </table>    <br/><br/>    \r\n    <hr class=\"hr6\"/><br/><br/>\r\n\r\n
+        \   <h4>Committees</h4>\r\n    <table cellspacing=\"20\" cellpadding=\"10\">\r\n
+        \       <tbody>\r\n                            <tr><td><a onclick=\"loadUrl('committees?com=7');\">Judiciary
+        \ Committee</a></td><td></td></tr>\r\n                    <tr><td><a onclick=\"loadUrl('committees?com=10');\">Roads
+        and Transport Committee</a></td><td></td></tr>\r\n            </tbody>\r\n
+        \   </table>\r\n    <br/>\r\n    \r\n    </div>\r\n<div id=\"sidebar\">\r\n
+        \                   <div class=\"box\">\r\n    <form class=\"searchform\"
+        method=\"post\" action=\"mps.php\" onsubmit=\"return false;\">\r\n        <input
+        type=\"hidden\" name=\"az\" value=\"1\"/>\r\n        <input type=\"text\"style=\"width:260px\"
+        list=\"\" oninput=\"updateMPSearch('filter','mpslist')\" onkeypress=\"process('filter',
+        event);\" id=\"filter\" class=\"searchfield\" name=\"filter\" placeholder=\"Search...\"/>
+        \       \r\n        <input type=\"button\" class=\"searchbutton\" value=\"Go\"
+        onclick=\"search('filter');\"/>        \r\n\r\n    </form><br/>\r\n    <div
+        id=\"mpslist\"></div>\r\n    <br/>\r\n    <hr class=\"hr\"/>\r\n    <h5>FILTER
+        BY:</h5><br/>\r\n    <form method=\"post\" class=\"filterform\" action=\"mps.php\">\r\n
+        \       <input type=\"hidden\" name=\"az\" value=\"100\"/>\r\n        <input
+        type=\"hidden\" name=\"filterform\" value=\"100\"/>\r\n        <select name=\"party\">\r\n
+        \           <option value=\"\">Select Party</option>\r\n    <option value='6'>All
+        People's Congress  (APC)</option><option value='3'>Convention People's Party
+        (CPP)</option><option value='1'>National Democratic Congress (NDC)</option><option
+        value='5'>National Democratic Party (NDP)</option><option value='2'>New Patriotic
+        Party (NPP)</option><option value='4'>Progressive People's Party (PPP)</option>
+        \       </select><br/><br/>\r\n        <select name=\"region\">\r\n            <option
+        value=\"\">Select Region</option>\r\n    <option value='Ashanti'>Ashanti</option><option
+        value='Brong Ahafo'>Brong Ahafo</option><option value='Central'>Central</option><option
+        value='Eastern'>Eastern</option><option value='Greater Accra'>Greater Accra</option><option
+        value='Northern'>Northern</option><option value='Upper East'>Upper East</option><option
+        value='Upper West'>Upper West</option><option value='Volta'>Volta</option><option
+        value='Western'>Western</option>        </select><br/><br/>\r\n        <select
+        name=\"const\">\r\n            <option value=\"\">Select Constituency</option>\r\n
+        \   <option value=' Ajumako-Enyan-Esiam '> Ajumako-Enyan-Esiam </option><option
+        value='Abetifi'>Abetifi</option><option value='Abirem'>Abirem</option><option
+        value='Ablekuma Central'>Ablekuma Central</option><option value='Ablekuma
+        North'>Ablekuma North</option><option value='Ablekuma South'>Ablekuma South</option><option
+        value='Ablekuma West'>Ablekuma West</option><option value='Abuakwa North'>Abuakwa
+        North</option><option value='Abura-Asebu-Kwamankese'>Abura-Asebu-Kwamankese</option><option
+        value='Achiase'>Achiase</option><option value='Ada'>Ada</option><option value='Adaklu'>Adaklu</option><option
+        value='Adansi-Asokwa'>Adansi-Asokwa</option><option value='Adentan'>Adentan</option><option
+        value='Afadjato South'>Afadjato South</option><option value='Afigya Kwabre
+        North'>Afigya Kwabre North</option><option value='Afigya Kwabre South'>Afigya
+        Kwabre South</option><option value='Afigya Sekyere East'>Afigya Sekyere East</option><option
+        value='Afram Plains North'>Afram Plains North</option><option value='Afram
+        Plains South'>Afram Plains South</option><option value='Agona East'>Agona
+        East</option><option value='Agona West'>Agona West</option><option value='Agotime-Ziope'>Agotime-Ziope</option><option
+        value='Ahafo Ano North'>Ahafo Ano North</option><option value='Ahafo Ano South
+        East'>Ahafo Ano South East</option><option value='Ahafo Ano South West'>Ahafo
+        Ano South West</option><option value='Ahanta West'>Ahanta West</option><option
+        value='Akan'>Akan</option><option value='Akatsi North'>Akatsi North</option><option
+        value='Akatsi South'>Akatsi South</option><option value='Akim Abuakwa South'>Akim
+        Abuakwa South</option><option value='Akim Oda'>Akim Oda</option><option value='Akim
+        Swedru'>Akim Swedru</option><option value='Akrofuom'>Akrofuom</option><option
+        value='Akuapem North'>Akuapem North</option><option value='Akuapem South'>Akuapem
+        South</option><option value='Akwatia'>Akwatia</option><option value='Amasaman'>Amasaman</option><option
+        value='Amenfi Central'>Amenfi Central</option><option value='Amenfi East'>Amenfi
+        East</option><option value='Amenfi West'>Amenfi West</option><option value='Anlo'>Anlo</option><option
+        value='Anyaa-Sowutuom'>Anyaa-Sowutuom</option><option value='Aowin'>Aowin</option><option
+        value='Asante-Akim Central'>Asante-Akim Central</option><option value='Asante-Akim
+        North'>Asante-Akim North</option><option value='Asante-Akim South'>Asante-Akim
+        South</option><option value='Asawase'>Asawase</option><option value='Asene-Akroso-Manso'>Asene-Akroso-Manso</option><option
+        value='Ashaiman'>Ashaiman</option><option value='Asikuma-Odoben-Brakwa'>Asikuma-Odoben-Brakwa</option><option
+        value='Asokwa'>Asokwa</option><option value='Assin Central'>Assin Central</option><option
+        value='Assin North'>Assin North</option><option value='Assin South'>Assin
+        South</option><option value='Asunafo North'>Asunafo North</option><option
+        value='Asunafo South'>Asunafo South</option><option value='Asuogyaman'>Asuogyaman</option><option
+        value='Asutifi North'>Asutifi North</option><option value='Asutifi South'>Asutifi
+        South</option><option value='Atebubu-Amantin'>Atebubu-Amantin</option><option
+        value='Atiwa East'>Atiwa East</option><option value='Atiwa West'>Atiwa West</option><option
+        value='Atwima Kwawoma'>Atwima Kwawoma</option><option value='Atwima Mponua
+        '>Atwima Mponua </option><option value='Atwima Nwabiagya North'>Atwima Nwabiagya
+        North</option><option value='Atwima Nwabiagya South'>Atwima Nwabiagya South</option><option
+        value='Awutu-Senya East'>Awutu-Senya East</option><option value='Awutu-Senya
+        West'>Awutu-Senya West</option><option value='Ayawaso Central'>Ayawaso Central</option><option
+        value='Ayawaso East'>Ayawaso East</option><option value='Ayawaso North'>Ayawaso
+        North</option><option value='Ayawaso West Wuogon'>Ayawaso West Wuogon</option><option
+        value='Ayensuano'>Ayensuano</option><option value='Banda'>Banda</option><option
+        value='Bantama'>Bantama</option><option value='Bawku Central'>Bawku Central</option><option
+        value='Bekwai'>Bekwai</option><option value='Berekum East'>Berekum East</option><option
+        value='Berekum West'>Berekum West</option><option value='Bia East'>Bia East</option><option
+        value='Bia West'>Bia West</option><option value='Biakoye'>Biakoye</option><option
+        value='Bibiani-Anhwiaso-Bekwai'>Bibiani-Anhwiaso-Bekwai</option><option value='Bimbilla'>Bimbilla</option><option
+        value='Binduri'>Binduri</option><option value='Bodi'>Bodi</option><option
+        value='Bole Bamboi'>Bole Bamboi</option><option value='Bolgatanga Central'>Bolgatanga
+        Central</option><option value='Bolgatanga East'>Bolgatanga East</option><option
+        value='Bongo'>Bongo</option><option value='Bortianor-Ngleshie-Amanfro'>Bortianor-Ngleshie-Amanfro</option><option
+        value='Bosome-Freho'>Bosome-Freho</option><option value='Bosomtwe'>Bosomtwe</option><option
+        value='Buem'>Buem</option><option value='Builsa North'>Builsa North</option><option
+        value='Builsa South'>Builsa South</option><option value='Bunkpurugu'>Bunkpurugu</option><option
+        value='Cape Coast North'>Cape Coast North</option><option value='Cape Coast
+        South'>Cape Coast South</option><option value='Central Tongu'>Central Tongu</option><option
+        value='Chereponi'>Chereponi</option><option value='Chiana-Paga'>Chiana-Paga</option><option
+        value='Daboya-Mankarigu'>Daboya-Mankarigu</option><option value='Dadekotopon'>Dadekotopon</option><option
+        value='Daffiama, Bussie, Issa'>Daffiama, Bussie, Issa</option><option value='Damango'>Damango</option><option
+        value='Dome Kwabenya'>Dome Kwabenya</option><option value='Domeabra-Obom'>Domeabra-Obom</option><option
+        value='Dormaa Central'>Dormaa Central</option><option value='Dormaa East'>Dormaa
+        East</option><option value='Dormaa West'>Dormaa West</option><option value='Effia'>Effia</option><option
+        value='Effiduase-Asokore'>Effiduase-Asokore</option><option value='Effutu'>Effutu</option><option
+        value='Ejisu'>Ejisu</option><option value='Ejura-Sekyedumase'>Ejura-Sekyedumase</option><option
+        value='Ekumfi'>Ekumfi</option><option value='Ellembele'>Ellembele</option><option
+        value='Essikado Ketan'>Essikado Ketan</option><option value='Evalue-Ajomoro-Gwira'>Evalue-Ajomoro-Gwira</option><option
+        value='Fanteakwa North'>Fanteakwa North</option><option value='Fanteakwa South
+        '>Fanteakwa South </option><option value='Fomena'>Fomena</option><option value='Garu'>Garu</option><option
+        value='Gomoa Central'>Gomoa Central</option><option value='Gomoa East'>Gomoa
+        East</option><option value='Gomoa West'>Gomoa West</option><option value='Gushiegu'>Gushiegu</option><option
+        value='Hemang Lower Denkyira'>Hemang Lower Denkyira</option><option value='Ho
+        Central'>Ho Central</option><option value='Ho West'>Ho West</option><option
+        value='Hohoe'>Hohoe</option><option value='Jaman North'>Jaman North</option><option
+        value='Jaman South'>Jaman South</option><option value='Jirapa'>Jirapa</option><option
+        value='Jomoro'>Jomoro</option><option value='Juaben'>Juaben</option><option
+        value='Juaboso'>Juaboso</option><option value='Kade'>Kade</option><option
+        value='Karaga'>Karaga</option><option value='Keta'>Keta</option><option value='Ketu
+        North'>Ketu North</option><option value='Ketu South'>Ketu South</option><option
+        value='Kintampo North'>Kintampo North</option><option value='Kintampo South'>Kintampo
+        South</option><option value='Klottey-Korley'>Klottey-Korley</option><option
+        value='Komenda Edina Eguafo Abrem'>Komenda Edina Eguafo Abrem</option><option
+        value='Kpandai'>Kpandai</option><option value='Kpando'>Kpando</option><option
+        value='Kpone-Katamanso'>Kpone-Katamanso</option><option value='Krachi East'>Krachi
+        East</option><option value='Krachi Nchumuru'>Krachi Nchumuru</option><option
+        value='Krachi West'>Krachi West</option><option value='Krowor'>Krowor</option><option
+        value='Kumawu'>Kumawu</option><option value='Kumbungu'>Kumbungu</option><option
+        value='Kwabre East'>Kwabre East</option><option value='Kwadaso'>Kwadaso</option><option
+        value='Kwesimintsim'>Kwesimintsim</option><option value='Lambussie'>Lambussie</option><option
+        value='Lawra'>Lawra</option><option value='Ledzokuku'>Ledzokuku</option><option
+        value='Lower Manya Krobo'>Lower Manya Krobo</option><option value='Lower West
+        Akim'>Lower West Akim</option><option value='Madina'>Madina</option><option
+        value='Mampong'>Mampong</option><option value='Manhyia North'>Manhyia North</option><option
+        value='Manhyia South'>Manhyia South</option><option value='Manso-Adubia'>Manso-Adubia</option><option
+        value='Manso-Nkwanta'>Manso-Nkwanta</option><option value='Mfantseman'>Mfantseman</option><option
+        value='Mion'>Mion</option><option value='Mpohor'>Mpohor</option><option value='Mpraeso'>Mpraeso</option><option
+        value='Nabdam'>Nabdam</option><option value='Nadowli Kaleo'>Nadowli Kaleo</option><option
+        value='Nalerigu /Gambaga'>Nalerigu /Gambaga</option><option value='Nandom'>Nandom</option><option
+        value='Nantong'>Nantong</option><option value='Navrongo Central'>Navrongo
+        Central</option><option value='New Edubease'>New Edubease</option><option
+        value='New Juaben North'>New Juaben North</option><option value='New Juaben
+        South'>New Juaben South</option><option value='Nhyiaeso'>Nhyiaeso</option><option
+        value='Ningo-Prampram'>Ningo-Prampram</option><option value='Nkawkaw'>Nkawkaw</option><option
+        value='Nkoranza North'>Nkoranza North</option><option value='Nkoranza South'>Nkoranza
+        South</option><option value='Nkwanta North'>Nkwanta North</option><option
+        value='Nkwanta South'>Nkwanta South</option><option value='North Dayi'>North
+        Dayi</option><option value='North Tongu'>North Tongu</option><option value='Nsawam-Adoagyiri'>Nsawam-Adoagyiri</option><option
+        value='Nsuta-Kwamang-Beposo'>Nsuta-Kwamang-Beposo</option><option value='Obuasi
+        East'>Obuasi East</option><option value='Obuasi West'>Obuasi West</option><option
+        value='Odododiodio'>Odododiodio</option><option value='Odotobri'>Odotobri</option><option
+        value='Offinso North'>Offinso North</option><option value='Offinso South'>Offinso
+        South</option><option value='Ofoase-Ayirebi'>Ofoase-Ayirebi</option><option
+        value='Oforikrom'>Oforikrom</option><option value='Okaikwei Central'>Okaikwei
+        Central</option><option value='Okaikwei North'>Okaikwei North</option><option
+        value='Okaikwei South'>Okaikwei South</option><option value='Okere'>Okere</option><option
+        value='Old Tafo'>Old Tafo</option><option value='Prestea-Huni Valley'>Prestea-Huni
+        Valley</option><option value='Pru East'>Pru East</option><option value='Pru
+        West'>Pru West</option><option value='Pusiga'>Pusiga</option><option value='Saboba'>Saboba</option><option
+        value='Sagnarigu'>Sagnarigu</option><option value='Salaga North'>Salaga North</option><option
+        value='Salaga South'>Salaga South</option><option value='Savelugu'>Savelugu</option><option
+        value='Sawla-Tuna Kalba'>Sawla-Tuna Kalba</option><option value='Sefwi-Akontombra'>Sefwi-Akontombra</option><option
+        value='Sefwi-Wiawso'>Sefwi-Wiawso</option><option value='Sege'>Sege</option><option
+        value='Sekondi'>Sekondi</option><option value='Sekyere Afram Plain'>Sekyere
+        Afram Plain</option><option value='Sene East'>Sene East</option><option value='Sene
+        West'>Sene West</option><option value='Shai-Osudoku'>Shai-Osudoku</option><option
+        value='Shama'>Shama</option><option value='Sissala East'>Sissala East</option><option
+        value='Sissala West'>Sissala West</option><option value='South Dayi'>South
+        Dayi</option><option value='South Tongu'>South Tongu</option><option value='Suaman'>Suaman</option><option
+        value='Suame '>Suame </option><option value='Subin'>Subin</option><option
+        value='Suhum'>Suhum</option><option value='Sunyani East'>Sunyani East</option><option
+        value='Sunyani West'>Sunyani West</option><option value='Tain'>Tain</option><option
+        value='Takoradi'>Takoradi</option><option value='Talensi'>Talensi</option><option
+        value='Tamale Central'>Tamale Central</option><option value='Tamale North'>Tamale
+        North</option><option value='Tamale South'>Tamale South</option><option value='Tano
+        North'>Tano North</option><option value='Tano South'>Tano South</option><option
+        value='Tarkwa-Nsuaem'>Tarkwa-Nsuaem</option><option value='Tatale-Sanguli'>Tatale-Sanguli</option><option
+        value='Techiman North'>Techiman North</option><option value='Techiman South'>Techiman
+        South</option><option value='Tema Central'>Tema Central</option><option value='Tema
+        East'>Tema East</option><option value='Tema West'>Tema West</option><option
+        value='Tempane'>Tempane</option><option value='Tolon'>Tolon</option><option
+        value='Trobu'>Trobu</option><option value='Twifo Atti Morkwa'>Twifo Atti Morkwa</option><option
+        value='Upper Denkyira East'>Upper Denkyira East</option><option value='Upper
+        Denkyira West'>Upper Denkyira West</option><option value='Upper Manya Krobo'>Upper
+        Manya Krobo</option><option value='Upper West Akim'>Upper West Akim</option><option
+        value='Wa Central'>Wa Central</option><option value='Wa East'>Wa East</option><option
+        value='Wa West'>Wa West</option><option value='Walewale'>Walewale</option><option
+        value='Wassa East'>Wassa East</option><option value='Weija Gbawe'>Weija Gbawe</option><option
+        value='Wenchi'>Wenchi</option><option value='Wulensi'>Wulensi</option><option
+        value='Yagaba-Kubori'>Yagaba-Kubori</option><option value='Yapei Kusawgu'>Yapei
+        Kusawgu</option><option value='Yendi'>Yendi</option><option value='Yilo Krobo'>Yilo
+        Krobo</option><option value='Yunyoo'>Yunyoo</option><option value='Zabzugu'>Zabzugu</option><option
+        value='Zebilla'>Zebilla</option>        </select><br/><br/>\r\n        <select
+        name=\"gender\">\r\n            <option value=\"\">Select Gender</option>\r\n
+        \   <option value='Male'>Male</option><option value='Female'>Female</option>
+        \       </select>\r\n        <br/><br/>\r\n        <input type=\"submit\"
+        value=\" Apply \"/>\r\n    </form>\r\n    <br/><hr class=\"hr\"/><br/>\r\n<a
+        href=\"mps?leadership\">Leadership of Parliament</a><br/><hr class='hr5'/><br/>\r\n<a
+        href=\"mps?az\">A-Z List of MPs</a><br/><hr class='hr5'/><br/>\r\n<a href=\"committees\">Committees
+        of Parliament</a><hr class='hr5'/>\r\n    <br/><br/><hr class=\"hr\"/>\r\n
+        \   <div class=\"box\">\r\n        <h5>RELATED LINKS</h5><br/>\r\n        <ul
+        type=\"square\">\r\n            <li ><a target=\"_blank\" href=\"http://www.cpahq.org/cpahq/\">Commonwealth
+        Parliamentary Association - CPA</a><br/><hr class=\"hr5\"/></li>\r\n            <li><a
+        target=\"_blank\" href=\"https://www.au.int/\">African Union</a><br/><hr class=\"hr5\"/></li>\r\n
+        \           <li  class=\"last\"><a target=\"_blank\" href=\"www.ghana.gov.gh/\">Government
+        of Ghana</a><br/><hr class=\"hr5\"/></li>\r\n            <li class=\"last\"><a
+        target=\"_blank\" href=\"https://judicial.gov.gh/\">The Judicial Service of
+        Ghana</a><br/><hr class=\"hr5\"/></li>\r\n            <li class=\"last\"><a
+        target=\"_blank\" href=\"http://www.ecowas.int/\">The Economic Community Of
+        West African States (ECOWAS)</a><br/><hr class=\"hr5\"/></li>\r\n            <li
+        class=\"last\"><a target=\"_blank\" href=\"http://www.ipu.org\">Inter-Parliamentary
+        Union-IPU</a><br/><hr class=\"hr5\"/></li>\r\n        </ul>\r\n    </div></div>\r\n
+        \   </div><br class=\"clearfix\" />\n</div>\n<hr class=\"hr2\" />\n\n<div
+        id=\"page-bottom\">\n    <div id=\"page-bottom-content\">\n        <div class=\"wrap
+        clearfix\">\n            <div class=\"col-1 fl\">\n                <h5>About
+        Parliament</h5>\n                <ul>\n                    <li><a href=\"history\">History
+        of Parliament</a></li>\n                    <li><a href=\"committees\">Committees
+        Of Parliament</a></li>                    \n                    <!--li><a
+        href=\"#\">Duties of an MP</a></li-->                    \n                    <li><a
+        href=\"ps\">Parliamentary Service</a></li>\n                    <li><a href=\"gallery\">Parliamentary
+        Gallery</a></li>\n                </ul>\n            </div><!-- // end .col-1
+        -->\n            <div class=\"col-1 fl push-2\">\n                <h5>Parliamentary
+        Business</h5>\n                <ul>\n                    <li><a href=\"docs?type=Acts&OT\">Acts</a></li>\n
+        \                   <li><a href=\"docs?type=Bills&OT\">Bills</a></li>\n                    <li><a
+        href=\"docs?type=LI&OT\">Legislative Instruments</a></li>\n                    <li><a
+        href=\"docs?type=HS\">Hansard</a></li>\n                    <li><a href=\"docs?type=OP\">Order
+        Papers</a></li>\n                    <li><a href=\"docs?type=AG\">Agenda</a></li>\n
+        \                   <li><a href=\"docs?type=CI&OT\">Constitutional Instrument</a></li>\n
+        \                   <!--li><a href=\"#\"> Executive Instrument </a></li-->\n
+        \                   <li><a href=\"docs?type=VP\">Votes & Proceedings</a></li>\n
+        \               </ul>                \n            </div><!-- // end .col-1
+        -->\n            <div class=\"col-1 fl push-2\">\n                <h5> Members
+        of Parliament</h5>\n                <ul>\n                    <li><a href=\"mps?leadership\">Leadership
+        of Parliament</a></li>\n                    <li><a href=\"mps\">Overview</a></li>\n
+        \                   <li><a href=\"mps?az\">A-Z list of MPs</a></li>\n                    \n
+        \                   <!--li><a href=\"#\">Committees Membership</a></li-->\n
+        \               </ul>                \n            </div><!-- // end .col-1
+        -->\n            <div class=\"col-1 fl push-2\">\n                <h5>Publication</h5>\n
+        \               <ul>\n                    <li><a href=\"#\">News & Events</a></li>\n
+        \                   <li><a href=\"#\">Acts</a></li>\n                    <li><a
+        href=\"#\">Budgets Statement</a></li>\n                    <li><a href=\"#\">State
+        Of Nation Address</a></li>\n                    <li><a href=\"#\">Brief Reports</a></li>\n
+        \                   <li><a href=\"#\">Committees Report</a></li>\n                </ul>
+        \               \n            </div><!-- // end .col-1 -->\n        </div>\n
+        \   </div>\n    <div id=\"page-bottom-sidebar\">\n        <div id=\"copyright\">\n
+        \           <p>Copyright &copy; 2017 Parliament of Ghana.<br/> All rights
+        reserved. </p>\n            <a href=\"disclaimer\" style=\"text-decoration:
+        underline\">Disclaimer</a>\n        </div>\n    </div>\n    <br class=\"clearfix\"
+        />\n</div>\n</div>\n<br/>\n</body>\n</html>\n"
+    http_version: 
+  recorded_at: Fri, 30 Jun 2017 12:08:36 GMT
+recorded_with: VCR 3.0.3
