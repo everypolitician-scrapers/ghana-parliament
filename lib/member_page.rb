@@ -44,7 +44,8 @@ class MemberPage < Scraped::HTML
   end
 
   def record_for(text)
-    box.xpath('//b[contains(text(),"%s")]/following::td' % text).first.text.tidy
+    node = box.xpath('//b[contains(text(),"%s")]/following::td' % text).first or return
+    node.text.tidy
   end
 
   def datefrom(str)
